@@ -369,7 +369,7 @@ public class InvertedIndexServiceImpl extends UnicastRemoteObject implements Inv
          // this fixed: java.rmi.ConnectException: Connection refused to host: 127.0.0.1;
          LocateRegistry.createRegistry(8099);
 
-         Naming.rebind("rmi://168.138.93.215:8080/InvertedIndexService", server);
+         Naming.rebind("rmi://127.0.0.1:8099/InvertedIndexService", server);
          System.out.println("InvertedIndexService ready...");
 //       String text = "Hello world\nHello Java world";
 //       Map<String, Integer> invertedIndex = server.getInvertedIndex(text);
