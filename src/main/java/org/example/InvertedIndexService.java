@@ -20,6 +20,6 @@ import java.util.Map;
 
 public interface InvertedIndexService extends Remote {
  // Returns the inverted index of words for a given text
-	Map<String, List<Integer>> getInvertedIndex(String text) throws RemoteException;
-	//Map<String, Integer> calculateFrequency(String file) throws RemoteException;
+	Map<String, List<Integer>> getInvertedIndexThreadPool(String text) throws RemoteException;
+	Map<String, List<Integer>> getInvertedIndexCompletableFuture(String file) throws RemoteException;
 }
